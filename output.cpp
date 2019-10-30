@@ -156,7 +156,9 @@ reference panel populations, the columns would be:
   genotype_id2:::hap2:::subpop2
   genotype_id2:::hap2:::subpop3
   */
-
+  
+  exit(0); // exit without error to prevent writing out non-msp files
+	
   fprintf(stderr,"Outputing forward-backward results.... \n");
   int fname_length = strlen(rfmix_opts.output_basename) + strlen(FB_EXTENSION) + 1;
   char fname[fname_length];
